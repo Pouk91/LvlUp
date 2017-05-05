@@ -1,25 +1,123 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Lvl Up!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/styles/index.scss">
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <!-- <script src="assets/scripts/auth/appFunction.js"></script> -->
+</head>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+<body id="container-fluid">
+  <h1>Lvl Up Sign Up!</h1>
+
+  <form id="sign-up">
+    <fieldset>
+      <input type="text" name="credentials[email]" value="email">
+      <input type="password" name="credentials[password]" value="password">
+      <input type="password" name="credentials[pasword_confirmation]" value="password_confirmation">
+      <input type="submit" name="submit" value="Sign up!">
+    </fieldset>
+  </form>
+<br>
+
+  <!-- <h3><div id="messageBanner"></div></h3>
+  <h3 id="totalGamesBanner">You have played <div id="game-count"></div> Games</h3> -->
+
+<br>
+  <form id="sign-in">
+    <fieldset>
+      <input type="text" name="credentials[email]" value="email">
+      <input type="password" name="credentials[password]" value="password">
+      <input type="submit" name="submit" value="Sign in!">
+    </fieldset>
+  </form>
+<br>
+
+  <!-- <h3><div id="signed-in"></div></h3> -->
+
+<br>
+  <form id="change-password">
+    <fieldset>
+      <input type="password" name="passwords[old]" value="old password">
+      <input type="password" name="passwords[new]" value="new password">
+      <input type="submit" name="submit" value="Change password!">
+    </fieldset>
+  </form>
+<br>
+
+<!-- <h3><div id="changePW"></div></h3> -->
+
+<br>
+  <form id="sign-out">
+    <fieldset>
+      <input type="submit" name="submit" value="Sign out!">
+    </fieldset>
+  </form>
+
+<!-- <h3><div id="signed-out"></div></h3> -->
+
+<!-- <div id="title"></div>
+
+  <br>
+
+  <form id="new-game">
+    <fieldset>
+      <input id="newGameButon" type="submit" name="submit" value="New game!">
+    </fieldset>
+  </form>
+
+  <br>
+
+  <form id="get-games">
+    <fieldset>
+      <input type="submit" name="submit" value="Get total games">
+    </fieldset>
+  </form>
+
+
+  <div id="container"></div>
+    <table id="gameBoard">
+
+  <tr id="row1">
+    <td id="c1" class="cell" class="cellClick" onClick="click" data-position="0"></td>
+    <td id="c2" class="cell" onClick="click" data-position="1"></td>
+    <td id="c3" class="cell" onClick="click" data-position="2"></td>
+  </tr>
+
+  <tr id="row2">
+    <td id="c4" class="cell" onClick="click" data-position="3"></td>
+    <td id="c5" class="cell" onClick="click" data-position="4"></td>
+    <td id="c6" class="cell" onClick="click" data-position="5"></td>
+  </tr>
+
+  <tr id="row3">
+    <td id="c7" class="cell" onClick="click" data-position="6"></td>
+    <td id="c8" class="cell" onClick="click" data-position="7"></td>
+    <td id="c9" class="cell" onClick="click" data-position="8"></td>
+  </tr>
+  </table> -->
+
+
+  <!-- <form id="game-record">
+    <fieldset>
+      <input type="text" name="id" value="Game ID">
+      <input type="submit" name="text" value="Game Record">
+    </fieldset>
+  </form>
+
+  <form id="game-records">
+    <fieldset>
+      <input type="submit" name="id" value="Game Records">
+    </fieldset>
+  </form> -->
+
+</body>
+
 </html>
