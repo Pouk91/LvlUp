@@ -14,7 +14,7 @@ $(() => {
 require('./example')
 
 const authEvents = require('./auth/events.js')
-// const gameEvents = require('./auth/tictactoeLogic.js')
+const lvlUpLogic = require('./auth/lvlUp.js')
 
 // On document ready
 $(() => {

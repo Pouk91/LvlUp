@@ -2,7 +2,7 @@
 // const store = require('../store.js')
 const getFormFields = require(`../../../lib/get-form-fields`)
 
-// const tictactoeLogic = require('./tictactoeLogic')
+// const lvlUpLogic = require('./lvlUp')
 const api = require('./api')
 const ui = require('./ui')
 
