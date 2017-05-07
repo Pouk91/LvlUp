@@ -17,7 +17,7 @@ const signUpSuccess = (data) => {
 
 // On signup failure message appears for 2 seconds
 const signUpFailure = (data) => {
-  console.log('fail')
+  console.log('Fail')
   // $('#messageBanner').text('Wrong credentials try again.')
   // setTimeout(function () { $('#messageBanner').text('') }, 2000)
 }
@@ -40,25 +40,25 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = (data) => {
-  console.log('fail')
+  console.log(data)
   // $('#messageBanner').text('Wrong credentials try again!')
   // setTimeout(function () { $('#messageBanner').text('') }, 2000)
   // console.log(data)
 }
 
-const changePasswordSuccess = (data) => {
+// const changePasswordSuccess = (data) => {
   // $('#messageBanner').text('Change password successful!')
   // setTimeout(function () { $('#messageBanner').text('') }, 2000)
   // console.log(data)
-}
+// }
 
-const changePasswordFailure = (data) => {
+// const changePasswordFailure = (data) => {
   // $('#messageBanner').text('Wrong credentials try again!')
   // setTimeout(function () { $('#messageBanner').text('') }, 2000)
   // console.log(data)
-}
+// }
 
-const signOutSuccess = (data) => {
+// const signOutSuccess = (data) => {
   // $('#messageBanner').text('Thanks for playing!')
   // setTimeout(function () { $('#messageBanner').text('') }, 2000)
   // $('#c1').text('')
@@ -86,11 +86,11 @@ const signOutSuccess = (data) => {
   // $('#sign-out').addClass('hide-elements')
   // $('#new-game').addClass('hide-elements')
   // $('#get-games').addClass('hide-elements')
-}
+// }
 
-const signOutFailure = (data) => {
+// const signOutFailure = (data) => {
   // console.eror(data)
-}
+// }
 
 // const newGameSuccess = (data) => {
 //   // console.log(store, 'this is new game data')
@@ -154,11 +154,11 @@ module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure,
-  changePasswordSuccess,
-  changePasswordFailure,
-  signOutSuccess,
-  signOutFailure
+  signInFailure
+  // changePasswordSuccess,
+  // changePasswordFailure,
+  // signOutSuccess,
+  // signOutFailure
 //   newGameSuccess,
 //   newGameFailure,
 //   updateGameSuccess,

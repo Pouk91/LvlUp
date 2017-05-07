@@ -6,17 +6,16 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const api = require('./api')
 const ui = require('./ui')
 
-// player sign-up
 const onSignUp = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
+  console.log(data)
   // console.log(data, 'hi')
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
 
-// player sign-in
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -25,7 +24,6 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
-// player change-password
 const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -34,7 +32,6 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
-// player sign-out
 const onSignOut = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -96,7 +93,7 @@ const onSignOut = function (event) {
 //   }
 
 //   tictactoeLogic.totalClicks++
-//   onUpdateGame()
+//   onUpdateGame()``
 // }
 
 // event handlers
@@ -110,9 +107,9 @@ const addHandlers = () => {
   // $('.cell').on('click', cellClick)
   // $('#totalGamesBanner').addClass('hide-elements')
   // $('#gameBoard').addClass('hide-elements')
-  $('#change-password').addClass('hide-elements')
-  $('#sign-out').addClass('hide-elements')
-  $('#game-record').addClass('hide-elements')
+  // $('#change-password').addClass('hide-elements')
+  // $('#sign-out').addClass('hide-elements')
+  // $('#game-record').addClass('hide-elements')
   // $('#new-game').addClass('hide-elements')
   // $('#game-records').addClass('hide-elements')
   // $('#get-games').addClass('hide-elements')
