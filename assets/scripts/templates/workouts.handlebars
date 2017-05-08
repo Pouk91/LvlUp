@@ -1,0 +1,18 @@
+{{#each books as |book|}}
+
+  <!-- {{> partial}} -->
+  <!-- Don't uncomment yet -->
+
+ <!-- Developers, why are we using data-id and not just i d?-->
+  <ul data-id="{{book.id}}">
+    <li>Title: {{book.title}}</li>
+  <li>
+    {{#if book.description}}
+      {{book.description}}
+    {{else}}
+      No description.
+    {{/if}}
+  </li>
+  <button data-id="button-{{@index}}" class="btn btn-default removeLastButton">Delete Book!</button>
+  </ul>
+{{/each}}

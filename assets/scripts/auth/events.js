@@ -52,12 +52,27 @@ const onWorkOut = function (event) {
 const onGetWorkOuts = function (event) {
   event.preventDefault()
   // const data = getFormFields(this)
-  // console.log(this)
   api.getWorkOuts()
   // console.log(data)
     .then(ui.getWorkOutsSuccess)
     .catch(ui.getWorkOutsFailure)
 }
+
+// const onUpdateWorkOut = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   api.updateWorkOut(data)
+//   .then(ui.updateWorkOutSuccess)
+//   .catch(ui.updateWorkOutFailure)
+// }
+
+// const onDeleteWorkOut = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(this)
+//   api.deleteWorkOut(data)
+//     .then(ui.deleteWorkOutSuccess)
+//     .catch(ui.deleteWorkOutFailure)
+// }
 
 // event handlers
 const addHandlers = () => {
@@ -67,7 +82,8 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#workout').on('submit', onWorkOut)
   $('#get-workouts').on('click', onGetWorkOuts)
-  // $('#delete-workout').on('submit', onGetWorkouts)
+  // $('#update-workout').on('click', onUpdateWorkOut)
+  // $('#delete-workout').on('click', onDeleteWorkOut)
 }
 
 module.exports = {

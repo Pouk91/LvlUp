@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
+// const showWorkouts = require('../templates/workouts.handlebars');
 
 const signUpSuccess = (data) => {
   console.log('Success')
@@ -52,6 +53,22 @@ const getWorkOutsFailure = (data) => {
   console.log('Fail')
 }
 
+// const updateWorkOutSuccess = (data) => {
+//   console.log('Success')
+// }
+
+// const updateWorkOutFailure = (data) => {
+//   console.log('Fail')
+// }
+
+// const deleteWorkOutSuccess = (data) => {
+//   console.log('Success')
+// }
+
+// const deleteWorkOutFailure = (data) => {
+//   console.log('Fail')
+// }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -65,4 +82,8 @@ module.exports = {
   workOutFailure,
   getWorkOutsSuccess,
   getWorkOutsFailure
+  // updateWorkOutSuccess,
+  // updateWorkOutFailure,
+  // deleteWorkOutSuccess,
+  // deleteWorkOutFailure
 }
