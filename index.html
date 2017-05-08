@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Push Up Tracker!</title>
+  <title>Workout Tracker!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags unless you know what you are doing -->
@@ -15,7 +15,8 @@
 </head>
 
 <body id="container-fluid">
-<!-- <button type="button" class="btn btn-primary">Back</button> -->
+  <h1>Workout Tracker</h1>
+
   <form id="sign-up">
     <fieldset>
       <input type="text" name="credentials[email]" value="email">
@@ -25,12 +26,12 @@
       <!-- <button type="button"  name="submit" class="btn btn-success">Sign Up</button> -->
     </fieldset>
   </form>
-<br>
+  <br>
 
   <!-- <h3><div id="messageBanner"></div></h3>
   <h3 id="totalGamesBanner">You have played <div id="game-count"></div> Games</h3> -->
 
-<br>
+  <br>
   <form id="sign-in">
     <fieldset>
       <input type="text" name="credentials[email]" value="email">
@@ -38,11 +39,11 @@
       <input type="submit" name="submit" value="Sign in">
     </fieldset>
   </form>
-<br>
+  <br>
 
   <!-- <h3><div id="signed-in"></div></h3> -->
 
-<br>
+  <br>
   <form id="change-password">
     <fieldset>
       <input type="password" name="passwords[old]" value="old password">
@@ -51,9 +52,9 @@
       <!-- <button type="button" class="btn btn-primary">Change Password</button> -->
     </fieldset>
   </form>
-<br>
+  <br>
 
-<!-- <h3><div id="changePW"></div></h3> -->
+  <!-- <h3><div id="changePW"></div></h3> -->
 
   <br>
   <form id="sign-out">
@@ -61,56 +62,22 @@
       <input type="submit" name="submit" value="Sign Out">
     </fieldset>
   </form>
-<br>
+  <br>
 
   <form id="workout">
     <fieldset>
       <input type="text" name="workout[name]">
       <input type="text" name="workout[reps]">
       <input type="text" name="workout[sets]">
-      <input type="submit" name="submit" value="Workouts">
-    </fieldset>
-  </form>
-  <!-- <div class="container">
-    <h2>Choose Your Lvl Up!</h2>
-    <div class="btn-group">
-      <button type="button" class="btn btn-info">Back</button>
-      <button type="button" class="btn btn-info">Chest</button>
-      <button type="button" class="btn btn-info">Core</button>
-      <button type="button" class="btn btn-info">Legs</button>
-    </div>
-  </div>
-
-<br> -->
-
-<!-- <div class="dropdown">
-  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Rate me!
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-  </ul>
-</div>
-<br>
-  <div class="form-group">
-  <label for="comment">Comment:</label>
-  <textarea class="form-control" rows="5" id="comment">Give us feedback so we can improve!</textarea>
-</div> -->
-
-<!-- <h3><div id="signed-out"></div></h3> -->
-
-<!-- <div id="title"></div> -->
-
-  <!-- <form id="new-game">
-    <fieldset>
-      <input id="newGameButon" type="submit" name="submit" value="New game!">
+      <button type="submit">Enter Workout</button>
     </fieldset>
   </form>
 
-  <br> -->
+  <br>
+
+  <button type="submit" id='get-workouts'>Get Workouts</button>
+
+  <br>
 
 </body>
 

@@ -42,6 +42,7 @@ const signOut = (data) => {
 }
 
 const userWorkOut = (data) => {
+  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/workouts/',
     method: 'POST',
@@ -52,10 +53,33 @@ const userWorkOut = (data) => {
   })
 }
 
+const getWorkOuts = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/workouts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+// const deleteWorkOut = (data) => {
+//   return $.ajax({
+//     url: config.apiOrigin + '/workouts/' + store.user.id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+//   })
+// }
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  userWorkOut
+  userWorkOut,
+  getWorkOuts
+  // deleteWorkOut
 }

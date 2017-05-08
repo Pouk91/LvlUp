@@ -44,6 +44,14 @@ const workOutFailure = (data) => {
   console.log('Fail')
 }
 
+const getWorkOutsSuccess = (data) => {
+  console.log(data)
+}
+
+const getWorkOutsFailure = (data) => {
+  console.log('Fail')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -54,5 +62,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   workOutSuccess,
-  workOutFailure
+  workOutFailure,
+  getWorkOutsSuccess,
+  getWorkOutsFailure
 }

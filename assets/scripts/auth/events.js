@@ -40,12 +40,23 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-const onWorkout = function (event) {
+const onWorkOut = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   api.userWorkOut(data)
-    .then(ui.setsSuccess)
-    .catch(ui.setsFailure)
+  // console.log(data)
+    .then(ui.workOutSuccess)
+    .catch(ui.workOutFailure)
+}
+
+const onGetWorkOuts = function (event) {
+  event.preventDefault()
+  // const data = getFormFields(this)
+  // console.log(this)
+  api.getWorkOuts()
+  // console.log(data)
+    .then(ui.getWorkOutsSuccess)
+    .catch(ui.getWorkOutsFailure)
 }
 
 // event handlers
@@ -54,7 +65,9 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
-  $('#workout').on('submit', onWorkout)
+  $('#workout').on('submit', onWorkOut)
+  $('#get-workouts').on('click', onGetWorkOuts)
+  // $('#delete-workout').on('submit', onGetWorkouts)
 }
 
 module.exports = {
