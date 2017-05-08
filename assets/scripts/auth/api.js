@@ -41,91 +41,21 @@ const signOut = (data) => {
   })
 }
 
-// const newGame = () => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games',
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-//
-// const updateGame = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: {
-//   "games": [
-//     {
-//       "id": 1,
-//       "cells": ["o","x","o","x","o","x","o","x","o"],
-//       "over": true,
-//       "player_x": {
-//         "id": 1,
-//         "email": "and@and.com"
-//       },
-//       "player_o": {
-//         "id": 3,
-//         "email": "dna@dna.com"
-//       }
-//     },
-//     {
-//       "id": 2,
-//       "cells": ["","","","","","","","",""],
-//       "over": false,
-//       "player_x": {
-//         "id": 3,
-//         "email": "dna@dna.com"
-//       },
-//       "player_o": {
-//         "id": 1,
-//         "email": "and@and.com"
-//       }
-//     }
-//   ]
-// }
-// })
-//
-// const updateMoves = (getIndex, getValue) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: {
-//       'game': {
-//         'cell': {
-//           'index': getIndex,
-//           'value': getValue
-//         },
-//         // 'over': false
-//       }
-//     }
-//   })
-// }
-//
-// const getGames = () => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const userWorkOut = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/workouts/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
-  // newGame,
-  // updateGame,
-  // updateMoves,
-  // getGames
+  signOut,
+  userWorkOut
 }

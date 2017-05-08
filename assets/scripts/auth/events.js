@@ -40,61 +40,13 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-// const onNewGame = function (event) {
-//   event.preventDefault()
-//   api.newGame()
-//   .then(ui.newGameSuccess)
-//   .catch(ui.newGameFailure)
-// }
-
-// const onUpdateGame = function () {
-//   if (tictactoeLogic.isNoWinner() || tictactoeLogic.isWinnerX() || tictactoeLogic.isWinnerO()) {
-//     // console.log(store)
-//     store.game.over = true
-//     const data = store
-//     // console.log(data, store)
-//     api.updateGame(data)
-//      .then(ui.updateGameSuccess)
-//      .catch(ui.updateGameFailure)
-//   }
-// }
-
-// const onUpdateMoves = function (getIndex, getValue) {
-//   // console.log(data.game)
-//   api.updateMoves(getIndex, getValue) // try data.game instead of data
-//   .done(ui.updateMovesSuccess)
-//   .fail(ui.updateMovesFailure)
-// }
-
-// const onGetGames = function (event) {
-//   event.preventDefault()
-//   api.getGames()
-//   .then(ui.getGamesSuccess)
-//   .catch(ui.getGamesFailure)
-// }
-
-// let currentPlayer = 'X'
-// // changes X & O on game board and checks winner from tictactoeLogic
-// const cellClick = function (event) {
-//   $(this).addClass('avoid-clicks') // connected as .avoid-clicks on gameboard.css to prevent X or O from replacing each other in cells
-//   let getIndex = $(this).data('position')
-//   let getValue = currentPlayer
-//   onUpdateMoves(getIndex, getValue)
-//   // debugger
-
-//   if (currentPlayer === 'O') {
-//     $(this).text('O')
-//     tictactoeLogic.isWinnerO()
-//     currentPlayer = 'X'
-//   } else {
-//     $(this).text('X')
-//     tictactoeLogic.isWinnerX()
-//     currentPlayer = 'O'
-//   }
-
-//   tictactoeLogic.totalClicks++
-//   onUpdateGame()``
-// }
+const onWorkout = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  api.userWorkOut(data)
+    .then(ui.setsSuccess)
+    .catch(ui.setsFailure)
+}
 
 // event handlers
 const addHandlers = () => {
@@ -102,17 +54,7 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
-  // $('#new-game').on('submit', onNewGame)
-  // $('#get-games').on('click', onGetGames)
-  // $('.cell').on('click', cellClick)
-  // $('#totalGamesBanner').addClass('hide-elements')
-  // $('#gameBoard').addClass('hide-elements')
-  // $('#change-password').addClass('hide-elements')
-  // $('#sign-out').addClass('hide-elements')
-  // $('#game-record').addClass('hide-elements')
-  // $('#new-game').addClass('hide-elements')
-  // $('#game-records').addClass('hide-elements')
-  // $('#get-games').addClass('hide-elements')
+  $('#workout').on('submit', onWorkout)
 }
 
 module.exports = {
