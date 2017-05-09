@@ -88,7 +88,6 @@ const deleteWorkOut = (id) => {
   })
 }
 
-
 module.exports = {
   signUp,
   signIn,

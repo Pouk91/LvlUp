@@ -4,17 +4,17 @@ const store = require('../store.js')
 const showWorkOutsTemplate = require('../templates/workouts.handlebars')
 
 const signUpSuccess = (data) => {
-  console.log('Success')
+  // console.log('Success')
 }
 
 // On signup failure message appears for 2 seconds
 const signUpFailure = (data) => {
-  console.log('Fail')
+  // console.log('Fail')
 }
 
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log('Success')
+  // console.log('Success')
   $('#sign-up').addClass('hide-elements')
   $('#sign-in').addClass('hide-elements')
   $('#change-password').addClass('hide-elements')
@@ -27,15 +27,15 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = (data) => {
-  console.log('Fail')
+  // console.log('Fail')
 }
 
 const changePasswordSuccess = (data) => {
-  console.log('Success')
+  // console.log('Success')
 }
 
 const changePasswordFailure = (data) => {
-  console.log('Fail')
+  // console.log('Fail')
 }
 
 const signOutSuccess = (data) => {
@@ -48,29 +48,29 @@ const signOutSuccess = (data) => {
   $('#delete-workout').addClass('hide-elements')
   $('#workouts').addClass('hide-elements')
   $('#get-workouts').addClass('hide-elements')
-  console.log('Success')
+  // console.log('Success')
   $('.content').addClass('hide-elements')
   // console.log('Success')
 }
 
 const signOutFailure = (data) => {
-  console.log('Fail')
+  // console.log('Fail')
 }
 
 const enterWorkOutSuccess = (data) => {
   $('.content').addClass('hide-elements')
   // store.workout = data.workout
-  console.log(data, 'enterWorkOuts')
+  // console.log(data, 'enterWorkOuts')
   // $('#get-workouts').click()
 }
 
 const enterWorkOutFailure = (data) => {
-  console.log(data)
+  // console.log(data)
 }
 
 const getWorkOutsSuccess = (data) => {
   $('.content').empty()
-  console.log(data)
+  // console.log(data)
   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
   $('.content').append(showWorkOutsHtml)
   $('.content').removeClass('hide-elements')
@@ -78,26 +78,26 @@ const getWorkOutsSuccess = (data) => {
 }
 
 const getWorkOutsFailure = (data) => {
-  console.log(data)
+  // console.log(data)
 }
 
 const updateWorkOutSuccess = (data) => {
   $('.content').addClass('hide-elements')
-  console.log('Success')
-}
-
-const updateWorkOutFailure = (data) => {
-  console.log('Fail')
-}
-
-const deleteWorkOutSuccess = (data) => {
-  console.log('Success')
-  $('.content').addClass('hide-elements')
   // console.log('Success')
 }
 
+const updateWorkOutFailure = (data) => {
+  // console.log('Fail')
+}
+
+const deleteWorkOutSuccess = (data) => {
+  // console.log('Success')
+  $('.content').addClass('hide-elements')
+  console.log('Success')
+}
+
 const deleteWorkOutFailure = (data) => {
-  console.log('Fail')
+  // console.log('Fail')
 }
 
 module.exports = {
