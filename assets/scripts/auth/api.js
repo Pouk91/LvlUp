@@ -52,11 +52,12 @@ const enterWorkOut = (data) => {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: data
+    data
   })
 }
 
 const getWorkOuts = () => {
+  console.log('success')
   return $.ajax({
     url: config.apiOrigin + '/workouts',
     method: 'GET',
@@ -86,6 +87,7 @@ const deleteWorkOut = (id) => {
     }
   })
 }
+
 
 module.exports = {
   signUp,

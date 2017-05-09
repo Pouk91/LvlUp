@@ -49,11 +49,12 @@ const onEnterWorkOut = function (event) {
 }
 
 const onGetWorkOuts = function (event) {
+  console.log('success')
   event.preventDefault()
   // const data = getFormFields(this)
   api.getWorkOuts()
-    .then(ui.getWorkOutsSuccess)
-    .catch(ui.getWorkOutsFailure)
+  .then(ui.getWorkOutsSuccess)
+  .catch(ui.getWorkOutsFailure)
 }
 
 const onUpdateWorkOut = function (event) {
