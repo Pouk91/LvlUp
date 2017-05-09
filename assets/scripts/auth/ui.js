@@ -48,6 +48,7 @@ const signOutSuccess = (data) => {
   $('#delete-workout').addClass('hide-elements')
   $('#workouts').addClass('hide-elements')
   $('#get-workouts').addClass('hide-elements')
+  $('.content').addClass('hide-elements')
   // console.log('Success')
 }
 
@@ -56,6 +57,7 @@ const signOutFailure = (data) => {
 }
 
 const enterWorkOutSuccess = (data) => {
+  $('.content').addClass('hide-elements')
   // store.workout = data.workout
   // console.log(data, 'enterWorkOuts')
   // $('#get-workouts').click()
@@ -88,6 +90,7 @@ const updateWorkOutFailure = (data) => {
 }
 
 const deleteWorkOutSuccess = (data) => {
+  $('.content').addClass('hide-elements')
   // console.log('Success')
 }
 
