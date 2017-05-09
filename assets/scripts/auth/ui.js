@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
-// const showWorkouts = require('../templates/workouts.handlebars');
+const showWorkOutsTemplate = require('../templates/workouts.handlebars')
 
 const signUpSuccess = (data) => {
   console.log('Success')
@@ -37,20 +37,25 @@ const signOutFailure = (data) => {
   console.log('Fail')
 }
 
-const workOutSuccess = (data) => {
-  console.log('Success')
+const enterWorkOutSuccess = (data) => {
+  // store.workout = data.workout
+  console.log(data, 'enterWorkOuts')
+  $('#get-workouts').click()
 }
 
-const workOutFailure = (data) => {
-  console.log('Fail')
+const enterWorkOutFailure = (data) => {
+  console.log(data)
 }
 
 const getWorkOutsSuccess = (data) => {
   console.log(data)
+  const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
+  $('.content').append(showWorkOutsHtml)
+  // $('.removeLastButton').on('click', removeItem)
 }
 
 const getWorkOutsFailure = (data) => {
-  console.log('Fail')
+  console.log(data)
 }
 
 // const updateWorkOutSuccess = (data) => {
@@ -78,8 +83,8 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  workOutSuccess,
-  workOutFailure,
+  enterWorkOutSuccess,
+  enterWorkOutFailure,
   getWorkOutsSuccess,
   getWorkOutsFailure
   // updateWorkOutSuccess,

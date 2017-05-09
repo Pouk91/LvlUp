@@ -7,6 +7,9 @@ const signUp = (data) => {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data: data
   })
 }
@@ -41,10 +44,10 @@ const signOut = (data) => {
   })
 }
 
-const userWorkOut = (data) => {
-  console.log(data)
+const enterWorkOut = (data) => {
+  // console.log(data)
   return $.ajax({
-    url: config.apiOrigin + '/workouts/',
+    url: config.apiOrigin + '/workouts',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -89,7 +92,7 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  userWorkOut,
+  enterWorkOut,
   getWorkOuts
   // deleteWorkOut,
   // updateWorkOut

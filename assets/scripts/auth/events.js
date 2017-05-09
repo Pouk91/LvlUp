@@ -40,20 +40,18 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
-const onWorkOut = function (event) {
+const onEnterWorkOut = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  api.userWorkOut(data)
-  // console.log(data)
-    .then(ui.workOutSuccess)
-    .catch(ui.workOutFailure)
+  api.enterWorkOut(data)
+    .then(ui.workOutEnterSuccess)
+    .catch(ui.workOutEnterFailure)
 }
 
 const onGetWorkOuts = function (event) {
   event.preventDefault()
   // const data = getFormFields(this)
   api.getWorkOuts()
-  // console.log(data)
     .then(ui.getWorkOutsSuccess)
     .catch(ui.getWorkOutsFailure)
 }
@@ -80,10 +78,17 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
-  $('#workout').on('submit', onWorkOut)
+  $('#enter-workout').on('submit', onEnterWorkOut)
   $('#get-workouts').on('click', onGetWorkOuts)
   // $('#update-workout').on('click', onUpdateWorkOut)
   // $('#delete-workout').on('click', onDeleteWorkOut)
+  // $('#change-password').addClass('hide-elements')
+  // $('#sign-out').addClass('hide-elements')
+  // $('#new-game').addClass('hide-elements')
+  // $('#update-workout').addClass('hide-elements')
+  // $('#delete-workout').addClass('hide-elements')
+  // $('#workouts').addClass('hide-elements')
+  // $('#get-workouts').addClass('hide-elements')
 }
 
 module.exports = {

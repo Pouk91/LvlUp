@@ -1,18 +1,20 @@
-{{#each books as |book|}}
+{{#each workouts as |workout|}}
 
-  <!-- {{> partial}} -->
+  {{> partial}}
   <!-- Don't uncomment yet -->
 
  <!-- Developers, why are we using data-id and not just i d?-->
-  <ul data-id="{{book.id}}">
-    <li>Title: {{book.title}}</li>
-  <li>
-    {{#if book.description}}
-      {{book.description}}
-    {{else}}
+  <dl data-id="{{workout.id}}">
+    <dt>Name:</dt>
+    <dd>{{workout.name}}</dd>
+    <!-- {{#if workout.name}} -->
+    <dt>Reps:</dt>
+    <dd>{{workout.reps}}</dd>
+    <dt>Sets:</dt>
+    <dd>{{workout.sets}}</dd>
+    <!-- {{else}}
       No description.
-    {{/if}}
-  </li>
-  <button data-id="button-{{@index}}" class="btn btn-default removeLastButton">Delete Book!</button>
-  </ul>
+    {{/if}} -->
+  <button data-id="button-{{@index}}" class="btn btn-default removeLastButton">Delete Workout!</button>
+</dl>
 {{/each}}
