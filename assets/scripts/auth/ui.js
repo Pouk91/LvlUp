@@ -70,7 +70,7 @@ const enterWorkOutFailure = (data) => {
 
 const getWorkOutsSuccess = (data) => {
   $('.content').empty()
-  // console.log(data)
+  console.log(data)
   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
   $('.content').append(showWorkOutsHtml)
   $('.content').removeClass('hide-elements')

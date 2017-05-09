@@ -9,7 +9,7 @@ const ui = require('./ui')
 const onSignUp = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log(data)
+  // console.log(data)
   // console.log(data, 'hi')
   api.signUp(data)
     .then(ui.signUpSuccess)
@@ -49,7 +49,7 @@ const onEnterWorkOut = function (event) {
 }
 
 const onGetWorkOuts = function (event) {
-  console.log('success')
+  // console.log('success')
   event.preventDefault()
   // const data = getFormFields(this)
   api.getWorkOuts()
