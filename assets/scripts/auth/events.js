@@ -58,19 +58,20 @@ const onGetWorkOuts = function (event) {
 
 // const onUpdateWorkOut = function (event) {
 //   event.preventDefault()
-//   const data = getFormFields(event.target)
+  // const data = getFormFields(event.target)
 //   api.updateWorkOut(data)
 //   .then(ui.updateWorkOutSuccess)
 //   .catch(ui.updateWorkOutFailure)
 // }
 
-// const onDeleteWorkOut = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(this)
-//   api.deleteWorkOut(data)
-//     .then(ui.deleteWorkOutSuccess)
-//     .catch(ui.deleteWorkOutFailure)
-// }
+const onDeleteWorkOut = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  // console.log(data.id)
+  api.deleteWorkOut(data.id)
+    .then(ui.deleteWorkOutSuccess)
+    .catch(ui.deleteWorkOutFailure)
+}
 
 // event handlers
 const addHandlers = () => {
@@ -80,8 +81,9 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#enter-workout').on('submit', onEnterWorkOut)
   $('#get-workouts').on('click', onGetWorkOuts)
+  $('#delete-workout').on('submit', onDeleteWorkOut)
+  // $('.removeLastButton').on('click', console.log('This Button Works'))
   // $('#update-workout').on('click', onUpdateWorkOut)
-  // $('#delete-workout').on('click', onDeleteWorkOut)
   // $('#change-password').addClass('hide-elements')
   // $('#sign-out').addClass('hide-elements')
   // $('#new-game').addClass('hide-elements')

@@ -5,6 +5,8 @@
 
  <!-- Developers, why are we using data-id and not just i d?-->
   <dl data-id="{{workout.id}}">
+    <dt>Id:</dt>
+    <dd>{{workout.id}}</dd>
     <dt>Name:</dt>
     <dd>{{workout.name}}</dd>
     <!-- {{#if workout.name}} -->
@@ -15,6 +17,6 @@
     <!-- {{else}}
       No description.
     {{/if}} -->
-  <button data-id="button-{{@index}}" class="btn btn-default removeLastButton">Delete Workout!</button>
+  <!-- <button data-id="button-{{@index}}" class="btn btn-default removeLastButton">Delete Workout!</button> -->
 </dl>
 {{/each}}

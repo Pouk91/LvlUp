@@ -40,7 +40,7 @@ const signOutFailure = (data) => {
 const enterWorkOutSuccess = (data) => {
   // store.workout = data.workout
   console.log(data, 'enterWorkOuts')
-  $('#get-workouts').click()
+  // $('#get-workouts').click()
 }
 
 const enterWorkOutFailure = (data) => {
@@ -48,6 +48,7 @@ const enterWorkOutFailure = (data) => {
 }
 
 const getWorkOutsSuccess = (data) => {
+  $('.content').empty()
   console.log(data)
   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
   $('.content').append(showWorkOutsHtml)
@@ -61,18 +62,18 @@ const getWorkOutsFailure = (data) => {
 // const updateWorkOutSuccess = (data) => {
 //   console.log('Success')
 // }
-
+//
 // const updateWorkOutFailure = (data) => {
 //   console.log('Fail')
 // }
 
-// const deleteWorkOutSuccess = (data) => {
-//   console.log('Success')
-// }
+const deleteWorkOutSuccess = (data) => {
+  console.log('Success')
+}
 
-// const deleteWorkOutFailure = (data) => {
-//   console.log('Fail')
-// }
+const deleteWorkOutFailure = (data) => {
+  console.log('Fail')
+}
 
 module.exports = {
   signUpSuccess,
@@ -86,9 +87,9 @@ module.exports = {
   enterWorkOutSuccess,
   enterWorkOutFailure,
   getWorkOutsSuccess,
-  getWorkOutsFailure
+  getWorkOutsFailure,
   // updateWorkOutSuccess,
   // updateWorkOutFailure,
-  // deleteWorkOutSuccess,
-  // deleteWorkOutFailure
+  deleteWorkOutSuccess,
+  deleteWorkOutFailure
 }

@@ -76,16 +76,15 @@ const getWorkOuts = () => {
 //   })
 // }
 //
-// const deleteWorkOut = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/workouts/' + store.user.id,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data: data
-//   })
-// }
+const deleteWorkOut = (id) => {
+  return $.ajax({
+    url: config.apiOrigin + '/workouts/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   signUp,
@@ -93,7 +92,7 @@ module.exports = {
   changePassword,
   signOut,
   enterWorkOut,
-  getWorkOuts
-  // deleteWorkOut,
+  getWorkOuts,
+  deleteWorkOut,
   // updateWorkOut
 }
