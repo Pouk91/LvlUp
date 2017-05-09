@@ -66,16 +66,17 @@ const getWorkOuts = () => {
   })
 }
 
-// const updateWorkOut = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/workouts/' + data,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-//
+const updateWorkOut = (id, data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/workouts/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 const deleteWorkOut = (id) => {
   return $.ajax({
     url: config.apiOrigin + '/workouts/' + id,
@@ -93,6 +94,6 @@ module.exports = {
   signOut,
   enterWorkOut,
   getWorkOuts,
-  deleteWorkOut,
-  // updateWorkOut
+  updateWorkOut,
+  deleteWorkOut
 }

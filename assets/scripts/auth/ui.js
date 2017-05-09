@@ -59,13 +59,13 @@ const getWorkOutsFailure = (data) => {
   console.log(data)
 }
 
-// const updateWorkOutSuccess = (data) => {
-//   console.log('Success')
-// }
-//
-// const updateWorkOutFailure = (data) => {
-//   console.log('Fail')
-// }
+const updateWorkOutSuccess = (data) => {
+  console.log('Success')
+}
+
+const updateWorkOutFailure = (data) => {
+  console.log('Fail')
+}
 
 const deleteWorkOutSuccess = (data) => {
   console.log('Success')
@@ -88,8 +88,8 @@ module.exports = {
   enterWorkOutFailure,
   getWorkOutsSuccess,
   getWorkOutsFailure,
-  // updateWorkOutSuccess,
-  // updateWorkOutFailure,
+  updateWorkOutSuccess,
+  updateWorkOutFailure,
   deleteWorkOutSuccess,
   deleteWorkOutFailure
 }
