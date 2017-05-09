@@ -57,7 +57,7 @@ const enterWorkOut = (data) => {
 }
 
 const getWorkOuts = () => {
-  console.log('success')
+  // console.log('success')
   return $.ajax({
     url: config.apiOrigin + '/workouts',
     method: 'GET',
