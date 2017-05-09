@@ -86,13 +86,12 @@ const addHandlers = () => {
   $('#update-workout').on('click', onUpdateWorkOut)
   $('#delete-workout').on('submit', onDeleteWorkOut)
   // $('.removeLastButton').on('click', console.log('This Button Works'))
-  // $('#change-password').addClass('hide-elements')
-  // $('#sign-out').addClass('hide-elements')
-  // $('#new-game').addClass('hide-elements')
-  // $('#update-workout').addClass('hide-elements')
-  // $('#delete-workout').addClass('hide-elements')
-  // $('#workouts').addClass('hide-elements')
-  // $('#get-workouts').addClass('hide-elements')
+  $('#sign-out').addClass('hide-elements')
+  $('#enter-workout').addClass('hide-elements')
+  $('#update-workout').addClass('hide-elements')
+  $('#delete-workout').addClass('hide-elements')
+  $('#workouts').addClass('hide-elements')
+  $('#get-workouts').addClass('hide-elements')
 }
 
 module.exports = {
