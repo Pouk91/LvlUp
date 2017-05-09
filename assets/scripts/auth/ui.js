@@ -48,7 +48,12 @@ const signOutSuccess = (data) => {
   $('#delete-workout').addClass('hide-elements')
   $('#workouts').addClass('hide-elements')
   $('#get-workouts').addClass('hide-elements')
+<<<<<<< HEAD
   console.log('Success')
+=======
+  $('.content').addClass('hide-elements')
+  // console.log('Success')
+>>>>>>> feature
 }
 
 const signOutFailure = (data) => {
@@ -56,6 +61,7 @@ const signOutFailure = (data) => {
 }
 
 const enterWorkOutSuccess = (data) => {
+  $('.content').addClass('hide-elements')
   // store.workout = data.workout
   console.log(data, 'enterWorkOuts')
   // $('#get-workouts').click()
@@ -86,7 +92,12 @@ const updateWorkOutFailure = (data) => {
 }
 
 const deleteWorkOutSuccess = (data) => {
+<<<<<<< HEAD
   console.log('Success')
+=======
+  $('.content').addClass('hide-elements')
+  // console.log('Success')
+>>>>>>> feature
 }
 
 const deleteWorkOutFailure = (data) => {
