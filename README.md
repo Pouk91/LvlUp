@@ -21,6 +21,8 @@ Wireframes:
 http://imgur.com/mUxtPLV
 http://imgur.com/B7wTiej
 
-Link:
+API GitHub Link:
+https://github.com/Pouk91/pushup-tracker-api
 
+Web App Link:
 https://pouk91.github.io/LvlUp/
