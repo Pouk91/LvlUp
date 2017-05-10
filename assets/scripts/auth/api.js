@@ -7,9 +7,6 @@ const signUp = (data) => {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
     data: data
   })
 }
