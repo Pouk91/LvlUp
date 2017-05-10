@@ -87,6 +87,7 @@ const addHandlers = () => {
   $('#update-workout').on('click', onUpdateWorkOut)
   $('#delete-workout').on('submit', onDeleteWorkOut)
   // $('.removeLastButton').on('click', console.log('This Button Works'))
+  $('#change-password').addClass('hide-elements')
   $('#sign-out').addClass('hide-elements')
   $('#enter-workout').addClass('hide-elements')
   $('#update-workout').addClass('hide-elements')
