@@ -75,7 +75,6 @@ const enterWorkOutSuccess = (data) => {
   $('.content').addClass('hide-elements')
   // store.workout = data.workout
   // console.log(data, 'enterWorkOuts')
-  // $('#get-workouts').click()
 }
 
 const enterWorkOutFailure = (data) => {
@@ -83,8 +82,10 @@ const enterWorkOutFailure = (data) => {
 }
 
 const getWorkOutsSuccess = (data) => {
-  $('.content').empty()
   // console.log(data)
+  $('#messageBanner').text('Workout Deleted!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  $('.content').empty()
   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
   $('.content').append(showWorkOutsHtml)
   $('.content').removeClass('hide-elements')
@@ -96,6 +97,8 @@ const getWorkOutsFailure = (data) => {
 }
 
 const updateWorkOutSuccess = (data) => {
+  $('#messageBanner').text('Workout Updated!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
   $('.content').addClass('hide-elements')
   // console.log('Success')
 }
@@ -106,6 +109,8 @@ const updateWorkOutFailure = (data) => {
 
 const deleteWorkOutSuccess = (data) => {
   // console.log('Success')
+  $('#messageBanner').text('Workout Deleted!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
   $('.content').addClass('hide-elements')
   console.log('Success')
 }
