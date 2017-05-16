@@ -41,11 +41,12 @@ const onSignOut = function (event) {
 }
 
 const onEnterWorkOut = function (event) {
+  // console.log('success')
   event.preventDefault()
   const data = getFormFields(this)
   api.enterWorkOut(data)
-    .then(ui.workOutEnterSuccess)
-    .catch(ui.workOutEnterFailure)
+    .then(ui.enterWorkOutSuccess)
+    .catch(ui.enterWorkOutFailure)
 }
 
 const onGetWorkOuts = function (event) {

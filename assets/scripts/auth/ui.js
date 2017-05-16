@@ -26,10 +26,7 @@ const signInSuccess = (data) => {
   $('#change-password').removeClass('hide-elements')
   $('#sign-out').removeClass('hide-elements')
   $('#enter-workout').removeClass('hide-elements')
-  $('#update-workout').removeClass('hide-elements')
-  $('#delete-workout').removeClass('hide-elements')
   $('#workouts').removeClass('hide-elements')
-  $('#get-workouts').removeClass('hide-elements')
 }
 
 const signInFailure = (data) => {
@@ -72,7 +69,13 @@ const signOutFailure = (data) => {
 }
 
 const enterWorkOutSuccess = (data) => {
+  // console.log('succes')
+  $('#messageBanner').text('Workout Created!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
   $('.content').addClass('hide-elements')
+  $('#update-workout').removeClass('hide-elements')
+  $('#delete-workout').removeClass('hide-elements')
+  $('#get-workouts').removeClass('hide-elements')
   // store.workout = data.workout
   // console.log(data, 'enterWorkOuts')
 }
@@ -83,7 +86,7 @@ const enterWorkOutFailure = (data) => {
 
 const getWorkOutsSuccess = (data) => {
   // console.log(data)
-  $('#messageBanner').text('Workout Deleted!')
+  $('#messageBanner').text('Here are your workouts')
   setTimeout(function () { $('#messageBanner').text('') }, 2000)
   $('.content').empty()
   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
@@ -93,7 +96,8 @@ const getWorkOutsSuccess = (data) => {
 }
 
 const getWorkOutsFailure = (data) => {
-  // console.log(data)
+  $('#messageBanner').text('No workouts saved, enter some to start!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
 }
 
 const updateWorkOutSuccess = (data) => {
@@ -104,6 +108,8 @@ const updateWorkOutSuccess = (data) => {
 }
 
 const updateWorkOutFailure = (data) => {
+  $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
   // console.log('Fail')
 }
 
@@ -116,7 +122,8 @@ const deleteWorkOutSuccess = (data) => {
 }
 
 const deleteWorkOutFailure = (data) => {
-  // console.log('Fail')
+  $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
+  setTimeout(function () { $('#messageBanner').text('') }, 2000)
 }
 
 module.exports = {
