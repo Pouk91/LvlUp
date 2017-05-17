@@ -17,7 +17,7 @@ const resetFormField = function () {
 const signUpSuccess = (data) => {
   // console.log('Success')
   $('#messageBanner').text('Sign up successful!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
 }
 
@@ -25,7 +25,7 @@ const signUpSuccess = (data) => {
 const signUpFailure = (data) => {
   // console.log('Fail')
   $('#messageBanner').text('Wrong credentials try again.')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
 }
 
@@ -33,7 +33,7 @@ const signInSuccess = (data) => {
   store.user = data.user
   // console.log('Success')
   $('#messageBanner').text('Sign in successful!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('#sign-up').addClass('hide-elements')
   $('#sign-in').addClass('hide-elements')
   $('#change-password').removeClass('hide-elements')
@@ -45,28 +45,28 @@ const signInSuccess = (data) => {
 
 const signInFailure = (data) => {
   $('#messageBanner').text('Wrong credentials try again!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
   // console.log('Fail')
 }
 
 const changePasswordSuccess = (data) => {
   $('#messageBanner').text('Change Password Succesful!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
   // console.log('Success')
 }
 
 const changePasswordFailure = (data) => {
   $('#messageBanner').text('Same password try again!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
   // console.log('Fail')
 }
 
 const signOutSuccess = (data) => {
   $('#messageBanner').text('See You Next Time!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('#sign-up').removeClass('hide-elements')
   $('#sign-in').removeClass('hide-elements')
   $('#change-password').addClass('hide-elements')
@@ -89,7 +89,7 @@ const signOutFailure = (data) => {
 const enterWorkOutSuccess = (data) => {
   // console.log('succes')
   $('#messageBanner').text('Workout Created!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('.content').addClass('hide-elements')
   $('#update-workout').removeClass('hide-elements')
   $('#delete-workout').removeClass('hide-elements')
@@ -106,7 +106,7 @@ const enterWorkOutFailure = (data) => {
 
 const getWorkOutsSuccess = (data) => {
   $('#messageBanner').text('Here are your workouts')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('.content').empty()
   const showWorkOutsHtml = showWorkOutsTemplate({ workouts: data.workouts })
   $('.content').append(showWorkOutsHtml)
@@ -117,13 +117,13 @@ const getWorkOutsSuccess = (data) => {
 
 const getWorkOutsFailure = (data) => {
   $('#messageBanner').text('No workouts saved, enter some to start!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
 }
 
 const updateWorkOutSuccess = (data) => {
   $('#messageBanner').text('Workout Updated!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('.content').addClass('hide-elements')
   resetFormField()
   // console.log('Success')
@@ -131,14 +131,14 @@ const updateWorkOutSuccess = (data) => {
 
 const updateWorkOutFailure = (data) => {
   $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
   // console.log('Fail')
 }
 
 const deleteWorkOutSuccess = (data) => {
   $('#messageBanner').text('Workout Deleted!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   $('.content').addClass('hide-elements')
   resetFormField()
   // console.log('Success')
@@ -146,7 +146,7 @@ const deleteWorkOutSuccess = (data) => {
 
 const deleteWorkOutFailure = (data) => {
   $('#messageBanner').text('Sorry ID not found. Click get workouts for one!')
-  setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  setTimeout(function () { $('#messageBanner').text('') }, 4000)
   resetFormField()
   // console.log('Failure')
 }
