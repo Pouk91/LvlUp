@@ -42,7 +42,7 @@ const changePasswordSuccess = (data) => {
 }
 
 const changePasswordFailure = (data) => {
-  $('#messageBanner').text('Wrong credentials try again!')
+  $('#messageBanner').text('Same password try again!')
   setTimeout(function () { $('#messageBanner').text('') }, 2000)
   // console.log('Fail')
 }
