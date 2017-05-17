@@ -118,6 +118,7 @@ const getWorkOutsSuccess = (data) => {
 const getWorkOutsFailure = (data) => {
   $('#messageBanner').text('No workouts saved, enter some to start!')
   setTimeout(function () { $('#messageBanner').text('') }, 2000)
+  resetFormField()
 }
 
 const updateWorkOutSuccess = (data) => {
