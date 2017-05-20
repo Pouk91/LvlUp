@@ -4,9 +4,11 @@ h1 {
   text-align: center;
 }
 
-body {
-  // background-image: url("");
-  // text-align: center;
+.hero {
+  height: 100%;
+  width: 100%;
+  background: url('../Images/onePunchMan.jpg');
+  background-size: cover;
 }
 
 #sign-up, #sign-in, #change-password, #sign-out, #enter-workout, #delete-workout, #update-workout, #messageBanner {
