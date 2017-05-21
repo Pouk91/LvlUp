@@ -5,7 +5,6 @@ h1 {
 }
 
 body {
-
   background-image: url('http://www.mobiefit.com/blog/wp-content/uploads/2017/02/OPM.png');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -16,16 +15,11 @@ body {
   background-position: center center;
 }
 
-// style {
-//   background-size: 100% 100%;
-//   width: 100%;
-// }
-
-// @media screen and (min-width: 980px) and (max-width: 1024px){
-//     style{
-//         background-image: url('../img/desktop.jpg');
-//     }
-
+@media screen and (min-width: 980px) and (max-width: 1024px){
+    body{
+        background-image: url('http://www.mobiefit.com/blog/wp-content/uploads/2017/02/OPM.png');
+    }
+}
 
 #sign-up, #sign-in, #change-password, #sign-out, #enter-workout, #delete-workout, #update-workout, #get-workouts, #messageBanner, .content {
   text-align: center;
