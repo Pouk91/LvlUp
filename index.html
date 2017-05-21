@@ -72,8 +72,8 @@ type="password" placeholder="confirm password">
   <form id="enter-workout">
     <!-- <fieldset>/ -->
       <input type="text" name="workout[name]" placeholder="Workout Name">
-      <input type="text" name="workout[reps]" placeholder="Reps">
-      <input type="text" name="workout[sets]" placeholder="Sets">
+      <input type="number" min="1" name="workout[reps]" placeholder="Reps">
+      <input type="number" min="1" name="workout[sets]" placeholder="Sets">
       <input type="submit" name="submit" value="Enter Workout">
     <!-- </fieldset> -->
   </form>
@@ -84,8 +84,8 @@ type="password" placeholder="confirm password">
     <!-- <fieldset>/ -->
       <input type="text" name="id" placeholder="ID">
       <input type="text" name="workout[name]" placeholder="Workout Name">
-      <input type="text" name="workout[reps]" placeholder="Reps">
-      <input type="text" name="workout[sets]" placeholder="Sets">
+      <input type="number" min="1" name="workout[reps]" placeholder="Reps">
+      <input type="number" min="1" name="workout[sets]" placeholder="Sets">
       <input type="submit" name="submit" value="Update Workout">
     <!-- </fieldset> -->
   </form>
