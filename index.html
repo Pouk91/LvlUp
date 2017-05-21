@@ -70,8 +70,8 @@ type="password" placeholder="confirm password">
   <form id="enter-workout">
     <!-- <fieldset>/ -->
       <input type="text" name="workout[name]" placeholder="Workout Name">
-      <input type="number" aname="workout[reps]" placeholder="Reps">
-      <input type="number" name="workout[sets]" placeholder="Sets">
+      <input type="number" min="1" onchange=""name="workout[reps]" placeholder="Reps">
+      <input type="number" min="1" name="workout[sets]" placeholder="Sets">
       <input type="submit" name="submit" class="btn btn-success" value="Enter Workout">
     <!-- </fieldset> -->
   </form>
@@ -82,8 +82,8 @@ type="password" placeholder="confirm password">
     <!-- <fieldset>/ -->
       <input type="text" name="id" placeholder="ID">
       <input type="text" name="workout[name]" placeholder="Workout Name">
-      <input type="number" name="workout[reps]" placeholder="Reps">
-      <input type="number" name="workout[sets]" placeholder="Sets">
+      <input type="number" min="1" name="workout[reps]" placeholder="Reps">
+      <input type="number" min="1" name="workout[sets]" placeholder="Sets">
       <input type="submit" name="submit" class="btn btn-primary" value="Update Workout">
     <!-- </fieldset> -->
   </form>
