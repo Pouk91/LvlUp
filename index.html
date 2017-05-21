@@ -11,19 +11,18 @@
   <!-- Do not add `script` tags unless you know what you are doing -->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-  <!-- <script src="assets/scripts/auth/appFunction.js"></script> -->
+
 </head>
 
 <body id="container-fluid">
+  <div>
 
-  <h1>Workout Tracker</h1>
+  <h1>One Punch Man Challenge Tracker!</h1>
 
 <div class="container">
-<div class="hero">
-</div>
 </div>
   <h3><div id="messageBanner"></div></h3>
-
+<br>
   <form id="sign-up">
     <fieldset>
       <input name="credentials[email]" type="text" placeholder="email">
@@ -31,8 +30,8 @@
 type="password" placeholder="enter password">
       <input name="credentials[password_confirmation]" type="password"
 type="password" placeholder="confirm password">
-      <input name="submit" type="submit" value="Sign up">
-      <!-- <button type="button"  name="submit" class="btn btn-success">Sign Up</button> -->
+      <!-- <input name="submit" type="submit" value="Sign up"> -->
+      <input type="submit" name="submit" class="btn btn-success" value="Sign-Up">
     </fieldset>
   </form>
   <br>
@@ -43,7 +42,7 @@ type="password" placeholder="confirm password">
     <fieldset>
       <input type="text" name="credentials[email]" placeholder="email">
       <input type="password" name="credentials[password]" placeholder="password">
-      <input type="submit" name="submit" value="Sign in">
+      <input type="submit" name="submit" class="btn btn-primary" value="Sign in">
     </fieldset>
   </form>
   <br>
@@ -53,8 +52,7 @@ type="password" placeholder="confirm password">
     <fieldset>
       <input type="password" name="passwords[old]" placeholder="old password">
       <input type="password" name="passwords[new]" placeholder="new password">
-      <input type="submit" name="submit" value="Change Password">
-      <!-- <button type="button" class="btn btn-primary">Change Password</button> -->
+      <input type="submit" name="submit" class="btn btn-primary" value="Change Password">
     </fieldset>
   </form>
   <br>
@@ -63,7 +61,7 @@ type="password" placeholder="confirm password">
 
   <form id="sign-out">
     <fieldset>
-      <input type="submit" name="submit" value="Sign Out">
+      <input type="submit" name="submit" class="btn btn-danger" value="Sign Out">
     </fieldset>
   </form>
 
@@ -74,7 +72,7 @@ type="password" placeholder="confirm password">
       <input type="text" name="workout[name]" placeholder="Workout Name">
       <input type="text" name="workout[reps]" placeholder="Reps">
       <input type="text" name="workout[sets]" placeholder="Sets">
-      <input type="submit" name="submit" value="Enter Workout">
+      <input type="submit" name="submit" class="btn btn-success" value="Enter Workout">
     <!-- </fieldset> -->
   </form>
 
@@ -86,7 +84,7 @@ type="password" placeholder="confirm password">
       <input type="text" name="workout[name]" placeholder="Workout Name">
       <input type="text" name="workout[reps]" placeholder="Reps">
       <input type="text" name="workout[sets]" placeholder="Sets">
-      <input type="submit" name="submit" value="Update Workout">
+      <input type="submit" name="submit" class="btn btn-primary" value="Update Workout">
     <!-- </fieldset> -->
   </form>
 
@@ -95,7 +93,7 @@ type="password" placeholder="confirm password">
   <form id="delete-workout">
     <!-- <fieldset>/ -->
     <input type="text" name="id" placeholder="ID">
-    <input type="submit" name="submit" value="Delete Workout">
+    <input type="submit" name="submit" class="btn btn-danger" value="Delete Workout">
     <!-- </fieldset> -->
   </form>
 
@@ -103,15 +101,15 @@ type="password" placeholder="confirm password">
 
   <form id="get-workouts">
     <fieldset>
-      <input type="submit" name="submit" value="Get Workouts">
+      <input type="submit" name="submit" class="btn btn-success" value="Get Workouts">
     </fieldset>
   </form>
-  <!-- <button type="submit" id='get-workouts'>Get Workouts</button> -->
 
    <br>
 
    <div class="content"></div>
 
+ </div>
 </body>
 
 </html>

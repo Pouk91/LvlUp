@@ -4,21 +4,33 @@ h1 {
   text-align: center;
 }
 
-.hero {
-  height: 100%;
-  width: 100%;
-  background: url('../Images/onePunchMan.jpg');
+body {
+
+  background-image: url('http://www.mobiefit.com/blog/wp-content/uploads/2017/02/OPM.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
 }
 
-#sign-up, #sign-in, #change-password, #sign-out, #enter-workout, #delete-workout, #update-workout, #messageBanner {
+// style {
+//   background-size: 100% 100%;
+//   width: 100%;
+// }
+
+// @media screen and (min-width: 980px) and (max-width: 1024px){
+//     style{
+//         background-image: url('../img/desktop.jpg');
+//     }
+
+
+#sign-up, #sign-in, #change-password, #sign-out, #enter-workout, #delete-workout, #update-workout, #get-workouts, #messageBanner, .content {
   text-align: center;
 }
 
-// .avoid-clicks {
-//   pointer-events: none;
-// }
-//
 .hide-elements {
   display: none;
 }
